@@ -13,7 +13,7 @@
       let
         pkgs = import nixpkgs { inherit system; };
       in {
-        astroimagej = pkgs.callPackage ./astroimagej { };
+        astroimagej = pkgs.callPackage ./default.nix { };
         default = self.packages.${system}.astroimagej;
       }
     );
