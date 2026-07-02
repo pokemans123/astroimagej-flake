@@ -4,14 +4,14 @@
 let
   sources = {
     x86_64-linux = {
-      url = "https://github.com/astroimagej/astroimagej/releases/download/6.0.9.00/AstroImageJ-6.0.9.00-linux-x64.tgz";
-      hash = "sha256-oV1iygqoX0Ep+rfGMmzZ+BD588QiznsSZKHSr5gFJfc=";
+      url = "https://github.com/astroimagej/astroimagej/releases/download/6.0.9.01/AstroImageJ-6.0.9.01-linux-x64.tgz";
+      hash = "sha256-x2jXH3wMsRDFdrlvOVF+ivAZXBBVZDmhIIvyKnw0N2g=";
     };
     #   nix-prefetch-url --type sha256 <url>
     #   nix hash to-sri --type sha256 <result>
     aarch64-linux = {
-      url = "https://github.com/astroimagej/astroimagej/releases/download/6.0.9.00/AstroImageJ-6.0.9.00-linux-aarch64.tgz";
-      hash = "sha256-YGekaKBsY26kXYrncnkCPaoyQpio8mktoG9WRzI3PNk=";
+      url = "https://github.com/astroimagej/astroimagej/releases/download/6.0.9.01/AstroImageJ-6.0.9.01-linux-aarch64.tgz";
+      hash = "sha256-mEkRRnMveTsAL0skoh71bk8+W1Jk3Y5BSpRF5AP5hFk=";
     };
   };
   source = sources.${stdenv.hostPlatform.system}
@@ -19,7 +19,7 @@ let
 in
 stdenv.mkDerivation {
   pname = "astroimagej";
-  version = "6.0.9.00";
+  version = "6.0.9.01";
 
   src = fetchurl source;
 
